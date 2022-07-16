@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import {StateContext} from "./FuncProvider"
+import {GlobalStateProvider} from "./FuncProvider"
+import RandomComponent from "./RandomComponent"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+ return (
+  <>
+  {/* wrap app around provider */}
+  <GlobalStateProvider>
 
-export default App;
+    {/* use with consumer */}
+    <StateContext.Consumer>
+                    {(context)=>{
+                        console.log(context)
+                        return (
+                            <div>
+                                My favourite book is {context.state.book}
+                            </div>
+                        )
+                    }
+                    }       
+    </StateContext.Consumer>
+    </GlobalStateProvider>
+
+
+    <RandomComponent />
+
+
+  </>
+ )
+ }
+export default App
