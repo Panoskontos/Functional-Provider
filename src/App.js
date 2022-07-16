@@ -14,7 +14,7 @@ function App() {
                         // console.log(context)
                         return (
                             <div>
-                                App that laods book {context.state.book}
+                                App that loads book {context.state.book}
                             
                             </div>
                         )

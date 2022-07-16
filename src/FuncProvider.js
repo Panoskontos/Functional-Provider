@@ -5,7 +5,8 @@ import React, { useContext, useState } from 'react'
 export const StateContext = React.createContext();
 
 
-// Use Context
+// Use Context 
+// Put it like this so you don't have to make multiple imports
 export function useStateContext(){
     return useContext(StateContext);
 }
@@ -16,7 +17,7 @@ export function useStateContext(){
 export function GlobalStateProvider({children}){
 
     // If you want to also be able to change it 
-    
+
     // const handleChange = (e) =>{
     //     setNewState({...newState, 
     //         state: {
