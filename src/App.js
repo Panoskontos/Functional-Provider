@@ -11,21 +11,24 @@ function App() {
     {/* use with consumer */}
     <StateContext.Consumer>
                     {(context)=>{
-                        console.log(context)
+                        // console.log(context)
                         return (
                             <div>
-                                My favourite book is {context.state.book}
+                                App that laods book {context.state.book}
+                            
                             </div>
                         )
                     }
                     }       
     </StateContext.Consumer>
-    </GlobalStateProvider>
 
-
+        <br/>
+    
+    {/* Component that shows how to use Consumers */}
     <RandomComponent />
 
 
+    </GlobalStateProvider>
   </>
  )
  }

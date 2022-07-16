@@ -15,21 +15,22 @@ export function useStateContext(){
 // Create Provider
 export function GlobalStateProvider({children}){
 
-    // handle change
-    const handleChange = (e) =>{
-        setNewState({...newState, 
-            state: {
-                book:e.target.value
-            }
-        });
-    }
+    // If you want to also be able to change it 
+    
+    // const handleChange = (e) =>{
+    //     setNewState({...newState, 
+    //         state: {
+    //             book:e.target.value
+    //         }
+    //     });
+    // }
 
     // create inital value with hooks
     const [newState, setNewState] = useState({
         state:{
             book:"Influence"
         },
-        handleChange: handleChange
+        // handleChange: handleChange
     })
 
     // Pass value to it's children

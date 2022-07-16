@@ -1,8 +1,17 @@
+import { StateContext } from "./FuncProvider"
 
 function RandomComponent(){
     return (
         <>
-        Random Component
+        <StateContext.Consumer>
+        {(context)=>{
+            console.log(context)
+            return (
+                <div>
+                    Random Component that loads {context.state.book}
+                </div>
+            )}}
+        </StateContext.Consumer>
         </>
     )
 
