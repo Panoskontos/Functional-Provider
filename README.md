@@ -1,1 +1,1 @@
-This is sample project for my Dear Junior Despoina
+This is a project for my Dear Junior Despoina
