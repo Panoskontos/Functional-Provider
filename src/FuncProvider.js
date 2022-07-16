@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react'
 
 
 // Create Context
-export const StateContext = React.createContext();
+export const StateContext = React.createContext("Default value");
+// DEfault value can be empty
 
 
 // Use Context 
